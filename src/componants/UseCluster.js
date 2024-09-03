@@ -13,6 +13,8 @@ function UseCluter() {
   
   async function handleSubmit(event) {
     event.preventDefault();
+    alert("this may take a little bit to run")
+
     const url = 'http://38.70.48.137:8000/run_ray';   //'http://127.0.0.1:8000';
     const formData = new FormData();
     formData.append('file', file);
@@ -40,10 +42,12 @@ function UseCluter() {
   return (
     <div className="hstack">
         
-       <form onSubmit={handleSubmit}>
-          <h1 style={{color: "white"}}>React File Upload</h1>
-          <input type="file" onChange={handleChange}/>
-          <button type="submit">Upload</button>
+       <form  onSubmit={handleSubmit}>
+          <h1 style={{color: "white"}}>File Upload</h1>
+          <input className="button"  type="file" onChange={handleChange}/>
+          <button className="button" type="submit">
+            <h1>Upload</h1>
+          </button>
         </form>
         
         {responseData && <h2 style={{color: "white"}}>{responseData}</h2>}
