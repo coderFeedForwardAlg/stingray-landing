@@ -49,7 +49,7 @@ print("sup")`;
           
         
       </div>
-
+	{/* ******************* needs media quarys to get rid of sting rays when width is < 1200 px!!!!!!!!!!!  */}
       <div className="stingrays">
       
         {/* <img src={logo} style={{gridRowStart: 1, gridColumnStart: 1, width:"50%", height:"50%", rotate:"0deg"}}/> */}
