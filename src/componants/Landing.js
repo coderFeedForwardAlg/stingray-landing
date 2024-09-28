@@ -44,7 +44,7 @@ print("sup")`;
         </h1>
         <h2 className="subheading">Get large GPU clusters, storage, and hosting at the lowest price on the market while enjoying the ease of cloud, all without the fear of vendor lock in!</h2>
         <button className="button">
-          <h1> <Link to="/ray_code">Get Started</Link> </h1>
+          <h1> <Link to="/doc_db">Get Started</Link> </h1>
           </button>
           
         
