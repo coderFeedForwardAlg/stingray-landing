@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function MakeDocDb() {
 
     const [responseData, setResponseData] = useState('');
@@ -12,14 +13,27 @@ function MakeDocDb() {
 
     const url = `https://makedocdb.team-stingray.com/add/${name}/${pass}`;   //'http://127.0.0.1:8000';
 
+    try{
     
-    let response = await fetch(url)
+      let response = await fetch(url, {
+        method: 'GET', 
+        headers: {
+          'Content-Type': 'application/json',
+          
+        },
+        // Add mode and credentials for CORS support
+        mode: 'cors', // Ensure CORS is used
+        credentials: 'same-origin' // Use 'include' for cookies and credentials
+      });
 
       const result = await response.text();
       if (result) {
         setResponseData(result);
       }
-
+    }catch (error) {
+      console.error('Fetch error:', error);
+    }
+  
   }
 
   let changeName = (e) =>{

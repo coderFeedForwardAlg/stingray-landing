@@ -50,6 +50,11 @@
   grid-template-rows: 30% 30% 30%;
 }
 
+.mobile{
+  display: none;
+  color: red;
+}
+
 @media screen and (max-width:1400px) {
   .stingrays{
     display: none;
@@ -65,5 +70,12 @@
   }
   .heading{
     margin: 0%;
+  }
+}
+
+
+@media screen and (max-width:768px) {
+  .mobile{
+    display: flex;
   }
 }
