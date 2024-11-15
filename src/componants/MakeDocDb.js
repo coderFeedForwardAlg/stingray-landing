@@ -50,17 +50,26 @@ function MakeDocDb() {
 
 
   return (
+    <div>
     <div className="hstack">
         <form  onSubmit={handleSubmit}>
             <h2 style={{color: "white"}}>User Name</h2>
           <input type="text" value={name} onChange={changeName}/>
           <h2 style={{color: "white"}}>Database Password</h2>
           <input type="text" value={pass} onChange={changePass}/>
-          <button className="button" type="submit">
+          <br/>
+          <button className="button" type="submit"> 
             <h1>Make data base</h1>
           </button>
+          <h2 style={{color: "white"}}>Need serverless functions?</h2>
+          <h2 style={{color: "white"}}>Email max@team-stingray.com</h2>
         </form>
+        
         {responseData && <h2 style={{color: "white"}}>{responseData}</h2>}
+        
+        
+    </div>
+    
     </div>
   );
 }
