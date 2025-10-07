@@ -8,14 +8,14 @@ import Pay from "./componants/Pay";
 
 
 function App() {
-  return(
+  return (
     <BrowserRouter>
       <Routes>
         <Route path="/" >
           <Route index element={<Landing />} />
           <Route path="ray_code" element={<UseCluster />} />
           <Route path="doc_db" element={<MakeDocDb />} />
-          <Route path="pay" element={<Pay/>} />
+          <Route path="pay" element={<Pay />} />
         </Route>
       </Routes>
     </BrowserRouter>
