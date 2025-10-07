@@ -2,7 +2,7 @@
 
 import logo from "../stingray_img-removebg.png"
 import '../App.css';
-import { Outlet, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function Landing() {
@@ -32,6 +32,8 @@ function Landing() {
   let python = `print("bye")
 print("sup")`;
 
+  let navigaite = useNavigate();
+
 
   return (
     <div className="hstack">
@@ -46,10 +48,9 @@ print("sup")`;
         </h1>
         {/* <h2 className="subheading">Get large GPU clusters, storage, and hosting at the lowest price on the market while enjoying the ease of cloud, all without the fear of vendor lock in!</h2> */}
         <h2 className="subheading">Imagine data storage, hosting, GPU clusters, and eazy genAI integration all running on cheap biofuel. Stingray is making this a reality. Sign up for the beta and get a free database! Email gaspsersscottma@gmail.com to get updates on development progress.</h2>
-        <button className="button">
-          {/* <h1> <Link to="/doc_db">Get Started</Link> </h1> */}
-          Get started
-        </button>
+        {/* <button className="button" onClick={navigaite('/doc_db')}> */}
+        {/*   Get started */}
+        {/* </button> */}
 
 
       </div>
@@ -65,7 +66,7 @@ print("sup")`;
         <img src={logo} style={{ gridRowStart: 3, gridColumnStart: 2, width: "100%", height: "100%", rotate: "-90deg" }} />
         {/* <img src={logo} style={{gridRowStart: 3, gridColumnStart: 3,width:"100%", height:"100%", rotate:"0deg"}}/> */}
       </div>
-      <Outlet />
+      {/* <Outlet /> */}
     </div>
   );
 }
